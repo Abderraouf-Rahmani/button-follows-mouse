@@ -19,7 +19,7 @@
         align-items: center;
         justify-content: center;
         background-color: rgb(237, 237, 237);
-        font-family: "Roboto", sans-serif;
+        font-family: "Rufina", serif;
         height: 400vh;
         width: 100%;
       }
@@ -34,25 +34,30 @@
 
       .btn {
         border: none;
-        padding: 10px;
-        font-size: 20px;
+        padding: 10px 30px;
+        font-size: 15px;
+        font-weight: 600;
         position: relative;
-        background-color: rgb(84, 146, 252);
-        color: white;
+        background-color: #aee8fa;
+        color: black;
         border-radius: 8px;
         outline: none;
         outline-offset: -2px;
         cursor: pointer;
         transition: top 0.08s, left 0.08s;
+        transition: background-color 0.2s cubic-bezier(0.5, 1, 0.5, 1),
+          color 0.2s cubic-bezier(0.5, 1, 0.5, 1);
+        transition-timing-function: background-color ease-in-out;
         transition-timing-function: ease-out;
       }
       .btn:focus {
-        outline: 4px solid rgb(141, 141, 141);
+        outline: 4px solid rgb(41, 41, 41);
         outline-offset: 3px;
       }
 
       .btn:hover {
-        background-color: blueviolet;
+        background-color: #336484;
+        color: white;
       }
     </style>
 
