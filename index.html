@@ -1,75 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>btn follows mouse</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="btn-container">
-        <button class="btn" >test button</button>
+      <button class="btn">test button</button>
     </div>
 
     <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(237, 237, 237);
-            font-family: 'Roboto', sans-serif;
-            height: 100vh;
-            width: 100%;
-        }
+      body {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(237, 237, 237);
+        font-family: "Roboto", sans-serif;
+        height: 400vh;
+        width: 100%;
+      }
 
-        
-        .btn-container{
-            outline: 2px dashed black;
-            outline-offset: -2px;
-            border-radius: 10px;
-            transform: translate(-50%, -50%);
-        }
-        
-        .btn {
-            border: none;
-            padding: 10px;
-            font-size: 20px;
-            position: relative;
-            background-color: rgb(84, 146, 252);
-            color: white;
-            border-radius: 8px;
-            outline: none;
-            outline-offset: -2px;
-            cursor: pointer;
-            transition: top .2s, left .2s;
-            transition-timing-function: ease-out;
-        }
-        .btn:focus{
-            outline: 4px solid rgb(141, 141, 141);
-            outline-offset: 3px;
-        }
-        
-        .btn:hover{
-            background-color: blueviolet;
+      .btn-container {
+        outline: 2px dashed black;
+        outline-offset: -2px;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+      }
 
-            
-        }
+      .btn {
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        position: relative;
+        background-color: rgb(84, 146, 252);
+        color: white;
+        border-radius: 8px;
+        outline: none;
+        outline-offset: -2px;
+        cursor: pointer;
+        transition: top 0.08s, left 0.08s;
+        transition-timing-function: ease-out;
+      }
+      .btn:focus {
+        outline: 4px solid rgb(141, 141, 141);
+        outline-offset: 3px;
+      }
 
+      .btn:hover {
+        background-color: blueviolet;
+      }
     </style>
 
     <script>
-        let button = document.querySelector('button')
-        let btn = document.querySelector('.btn')
-        let btnContainer = document.querySelector('.btn-container')
-        console.log(btn)
-        const follow = (e)=>{
-            btn.style.top = `${(e.pageY - btnContainer.offsetTop) * 0.1}px`
-            btn.style.left = `${(e.pageX - btnContainer.offsetLeft) * 0.1}px`
-        }
-        window.addEventListener('mousemove', follow)
-
+      let button = document.querySelector("button");
+      let btn = document.querySelector(".btn");
+      let btnContainer = document.querySelector(".btn-container");
+      console.log(btn);
+      const follow = (e) => {
+        btn.style.top = `${(e.pageY - btnContainer.offsetTop) * 0.1}px`;
+        btn.style.left = `${(e.pageX - btnContainer.offsetLeft) * 0.2}px`;
+      };
+      window.addEventListener("mousemove", follow);
     </script>
-</body>
+  </body>
 </html>
